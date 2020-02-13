@@ -8,9 +8,10 @@ import {
     userOrdersHistoryError,
     UserOrdersHistoryFetch,
 } from '../actions';
+import { getOrderAPI } from '../../../../helpers';
 
 const ordersOptions: RequestOptions = {
-    apiVersion: 'peatio',
+    apiVersion: getOrderAPI(),
     withHeaders: true,
 };
 

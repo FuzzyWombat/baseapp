@@ -7,10 +7,10 @@ import {
     userOpenOrdersError,
     UserOpenOrdersFetch,
 } from '../actions';
-
+import { getOrderAPI } from '../../../../helpers';
 
 const ordersOptions: RequestOptions = {
-    apiVersion: 'peatio',
+    apiVersion: getOrderAPI(),
 };
 
 export function* userOpenOrdersFetchSaga(action: UserOpenOrdersFetch) {

@@ -8,11 +8,11 @@ import {
     orderExecuteError,
     OrderExecuteFetch,
 } from '../actions';
-import { getCsrfToken } from '../../../../helpers';
+import { getCsrfToken, getOrderAPI } from '../../../../helpers';
 
 const executeOptions = (csrfToken?: string): RequestOptions => {
     return {
-        apiVersion: 'peatio',
+        apiVersion: getOrderAPI(),
         headers: { 'X-CSRF-Token': csrfToken },
     };
 };

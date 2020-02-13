@@ -9,6 +9,7 @@ import {
     arkeUrl,
     authUrl,
     tradeUrl,
+    finexUrl,
     withCredentials,
 } from './config';
 
@@ -25,7 +26,7 @@ export interface JsonBody {
 }
 
 export interface RequestOptions {
-    apiVersion: 'applogic' | 'peatio' | 'barong' | 'arke';
+    apiVersion: 'applogic' | 'peatio' | 'barong' | 'arke' | 'finex';
     withHeaders?: boolean;
     headers?: Object;
 }
@@ -47,6 +48,7 @@ const getAPI = () => ({
     applogic: `${applogicUrl()}`,
     peatio: `${tradeUrl()}`,
     arke: `${arkeUrl()}`,
+    finex: `${finexUrl()}`,
 });
 
 const buildRequest = (request: Request, configData: RequestOptions) => {
